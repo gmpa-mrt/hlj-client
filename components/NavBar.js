@@ -1,16 +1,17 @@
 import Image from "next/image";
-import {useWindowSize} from "../hooks/useWindowSize";
+import Link from "next/link";
+import Burger from "./Burger";
+import useWindowSize from "../hooks/useWindowSize";
 import exitIcon from "../public/exit.svg";
 import logo from "../public/favicon.ico";
 import userIcon from "../public/user.svg";
-import Burger from "./Burger";
 
-function NavBar() {
+function NavBar({ visible }) {
 
     const { windowSize } = useWindowSize()
 
     return (
-        <nav className="w-full p-4 inline-flex justify-between items-center">
+        <nav className={visible ? 'nav' : 'nav-fixed'}>
             {windowSize.width < 800 && (
                 <Burger/>
             )}
@@ -20,8 +21,16 @@ function NavBar() {
                 ? <></>
                 : (
                     <ul className="inline-flex space-x-20 text-white font-bold">
-                        <li>Home</li>
-                        <li>Gallery</li>
+                        <li>
+                            <Link href={'/'}>
+                                <a>Home</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={'/gallery'}>
+                                <a>Gallery</a>
+                            </Link>
+                        </li>
                         <li>Mylib</li>
                         <li>Practice</li>
                     </ul>

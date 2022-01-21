@@ -27,13 +27,31 @@ a {
     box-sizing: border-box;
 }
 
+.nav, .nav-fixed {
+    @apply
+    w-full
+    p-4
+    fixed
+    top-0
+    inline-flex
+    justify-between
+    items-center
+    z-50
+}
+
+.nav-fixed {
+    @apply
+    bg-black/30
+    backdrop-blur
+}
+
+
 .burger-container {
     position: relative;
     height: 28px;
     width: 36px;
     cursor: pointer;
 }
-
 
 .burger-bun-top,
 .burger-bun-bot,
