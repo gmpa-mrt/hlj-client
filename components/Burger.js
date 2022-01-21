@@ -20,23 +20,17 @@ function Burger() {
                     </>
                 </div>
             ) : (
-                <div className="h-screen w-screen absolute inset-0 bg-purple-400 z-10">
+                <div className="h-screen w-screen fixed inset-0 bg-purple-400 z-10">
                     <span className="font-bold text-white" onClick={handleOpen}>X</span>
-                    <ul>
+                    <ul className="h-2/3 w-full flex flex-col justify-evenly items-center text-white font-bold text-2xl">
                         <li>Home</li>
                         <li>Gallery</li>
                         <li>Mylib</li>
                         <li>Practice</li>
+                        <li>Account</li>
                     </ul>
                 </div>
             )}
-
-            {/*<div className="burger-ring">*/}
-            {/*    <svg className="svg-ring">*/}
-            {/*        <path className="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"*/}
-            {/*              d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"/>*/}
-            {/*    </svg>*/}
-            {/*</div>*/}
         </>
     )
 }
