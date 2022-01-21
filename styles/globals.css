@@ -4,17 +4,46 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+    @apply
+    bg-japanese-flower
+    bg-cover
+    bg-no-repeat
+}
+
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+.burger-container {
+    position: relative;
+    height: 28px;
+    width: 36px;
+    cursor: pointer;
+}
+
+
+.burger-bun-top,
+.burger-bun-bot,
+.burger-filling {
+    height: 4px;
+    width: 36px;
+    display: block;
+    margin-top: 5px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+
+
