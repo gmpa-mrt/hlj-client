@@ -1,0 +1,8 @@
+.animation-selected {
+    animation: ease-out 1s selected;
+}
+
+@keyframes selected {
+    from {transform: translateX(0)}
+    to {transform: translateX(100%)}
+}

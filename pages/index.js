@@ -2,7 +2,6 @@ import Card from "../components/Card";
 import Layout from "../components/Layout";
 import test from "../public/test.jpg"
 
-
 export default function Home() {
     return (
         <Layout>

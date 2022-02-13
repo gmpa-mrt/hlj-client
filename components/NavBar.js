@@ -6,7 +6,7 @@ import exitIcon from "../public/exit.svg";
 import logo from "../public/favicon.ico";
 import userIcon from "../public/user.svg";
 
-function NavBar({ visible }) {
+function NavBar({ visible, toggle }) {
 
     const { windowSize } = useWindowSize()
 
@@ -41,7 +41,8 @@ function NavBar({ visible }) {
                     : (
                         <li>
                             <Image src={userIcon} alt=""
-                                   width={25} height={25}/>
+                                   width={25} height={25}
+                                   onClick={toggle}/>
                         </li>
                     )}
                 <li>
