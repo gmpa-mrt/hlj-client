@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import {useQuery} from "react-query";
+import {fetchJson} from "../lib/api";
 import Burger from "./Burger";
 import useWindowSize from "../hooks/useWindowSize";
 import exitIcon from "../public/exit.svg";
@@ -9,6 +11,21 @@ import userIcon from "../public/user.svg";
 function NavBar({ visible, toggle }) {
 
     const { windowSize } = useWindowSize()
+    const query = useQuery('user', async () => {
+        try {
+            return await fetchJson('http://localhost:4000/me')
+        } catch {
+            return  undefined
+        }
+    }, {
+        cacheTime: Infinity,
+        staleTime: 10_000 //ms
+    })
+
+    const user = query.data
+
+    console.log('[NavaBar] user', user)
+
 
     return (
         <nav className={visible ? 'nav' : 'nav-fixed'}>
