@@ -1,8 +1,10 @@
+/*@Todo animation transition selected menu*/
+
 .animation-selected {
-    animation: ease-out 1s selected;
+    animation: ease-in 5s selected;
 }
 
 @keyframes selected {
-    from {transform: translateX(0)}
+    from {transform: translateX(-1000%)}
     to {transform: translateX(100%)}
 }

@@ -1,13 +1,13 @@
-import Input from "./Input";
 import LayoutForm from "./LayoutForm";
+import Input from "./Input";
 
-function Register() {
+function Register({back}) {
     return (
-        <LayoutForm>
+        <LayoutForm back={back}>
             <Input label={"Email"} typeInput={"email"}/>
             <Input label={"Password"} typeInput={"password"}/>
             <button className="text-white hover:font-bold">
-                Create
+                <span>Create</span>
             </button>
         </LayoutForm>
     )
